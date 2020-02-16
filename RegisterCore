@@ -1,0 +1,26 @@
+	@Override
+	public void run() {
+		// TODO Auto-generated method stub
+		String threadnum = Thread.currentThread().getName().substring(7);
+		String registerName = threadnum+"号窗口进行了挂号";
+		
+		add(registerName);
+		
+	}
+	synchronized void add(String registerName) {
+		
+		if (num  > 0) {
+			try {
+				Thread.sleep(1000L);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+			/*num2--;
+			int num3 = num - num2;*/
+			int num2 = --num;
+			int num3 = number-num2;
+			System.out.println(registerName+"号码为"+num3+"还剩"+num2+"个号");
+		} 
+	}
